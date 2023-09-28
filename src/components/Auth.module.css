@@ -6,6 +6,7 @@
   padding: 1rem;
   text-align: center;
   background-color: #f4f0fa;
+  font-size: 1.5rem;
 }
 
 .control {
@@ -14,9 +15,9 @@
 
 .control label {
   display: block;
-  color: #616161;
-  text-transform: uppercase;
+  color: #575757;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .control input {
@@ -26,4 +27,8 @@
   border-radius: 4px;
   padding: 0.25rem;
   border: 1px solid #ccc;
+}
+
+.auth-button {
+  margin-top: 0.5rem;
 }

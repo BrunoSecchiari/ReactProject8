@@ -1,19 +1,29 @@
-import classes from './Auth.module.css';
+import { useDispatch } from 'react-redux';
+import { authActions } from '../store/auth';
+import styles from './Auth.module.css';
 
 const Auth = () => {
+  const dispatch = useDispatch();
+
+  const loginHandler = (event) => {
+    event.preventDefault();
+
+    dispatch(authActions.login());
+  };
+
   return (
-    <main className={classes.auth}>
+    <main className={styles.auth}>
       <section>
-        <form>
-          <div className={classes.control}>
+        <form onSubmit={loginHandler}>
+          <div className={styles.control}>
             <label htmlFor='email'>Email</label>
             <input type='email' id='email' />
           </div>
-          <div className={classes.control}>
+          <div className={styles.control}>
             <label htmlFor='password'>Password</label>
             <input type='password' id='password' />
           </div>
-          <button>Login</button>
+          <button className={styles['auth-button']}>Login</button>
         </form>
       </section>
     </main>
